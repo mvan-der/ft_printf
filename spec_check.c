@@ -24,8 +24,3 @@ int	spec_check(char *input)
 		ft_putchar ('%');
 	return (1);
 }
-
-// char	conversion_c(?) //??what to pass from ft_printf to conversion_check to pass to conversion_c? This method is too complicated I guess..
-// {
-
-// }

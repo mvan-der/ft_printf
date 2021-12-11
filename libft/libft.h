@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/06 15:22:10 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/10 16:17:17 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/11 18:39:43 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ char			*ft_itoa(long int n, int base);
 // void			ft_putnbr_fd(int n, int fd);
 // void			ft_putstr_fd(char *s, int fd);
 // void			ft_putendl_fd(char *s, int fd);
+void			ft_putchar(int c);
 
 // typedef struct	s_list
 // {
