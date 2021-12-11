@@ -25,15 +25,13 @@ int	spec_conv(int a, va_list arguments, int count)
 	// 	conv_c(arguments, count);
 	// if (a == 'X')
 	// 	conv_c(arguments, count);
-	// if (a == '%')
-	// 	ft_putchar ('%');
+	if (a == '%')
+		ft_putchar ('%');
 	return (1);
 }
 
 int	conversion(char *conv, va_list arguments, int count)
 {
-	// int		i;
-
 	while (*conv)
 	{
 		while (*conv != '%')
@@ -46,14 +44,6 @@ int	conversion(char *conv, va_list arguments, int count)
 		spec_conv(spec_check(conv), arguments, count);
 		conv++;
 		count++;
-		
-		// if (spec_check(conv) == 'c')
-		// {
-		// 	i = va_arg(arguments, int);
-		// 	ft_putchar (i);
-		// 	conv++;
-		// 	count++;
-		// }
 	}
 	return (count);
 }
