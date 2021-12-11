@@ -4,12 +4,17 @@
 #include "./libft/libft.h"
 #include <stdio.h>
 
-int	conv_c(va_list arguments, int count)
+void	conv_c(va_list arguments)
 {
 	int	i;
 
 	i = va_arg(arguments, int);
 	ft_putchar (i);
-	count++;
-	return (count);
+}
+
+void	conv_s(va_list arguments)
+{
+	char	*s;
+	s = va_arg(arguments, char *);
+	ft_putstr(s);
 }

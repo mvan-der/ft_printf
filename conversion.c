@@ -5,14 +5,15 @@
 #include <stdio.h>
 
 int	spec_check(char *input);
-int	conv_c(va_list arguments, int count);
+int	conv_c(va_list arguments);
+int	conv_s(va_list arguments);
 
-int	spec_conv(int a, va_list arguments, int count)
+int	spec_conv(int a, va_list arguments)
 {
 	if (a == 'c')
-		conv_c(arguments, count);
-	// if (a == 's')
-	// 	conv_s(arguments, count);
+		conv_c(arguments);
+	if (a == 's')
+		conv_s(arguments);
 	// if (a == 'p')
 	// 	conv_p(arguments, count);
 	// if (a == 'd')
@@ -30,7 +31,7 @@ int	spec_conv(int a, va_list arguments, int count)
 	return (1);
 }
 
-int	conversion(char *conv, va_list arguments, int count)
+void	conversion(char *conv, va_list arguments)
 {
 	while (*conv)
 	{
@@ -38,12 +39,9 @@ int	conversion(char *conv, va_list arguments, int count)
 		{
 			ft_putchar(*conv);
 			conv++;
-			count++;
 		}
 		conv++;
-		spec_conv(spec_check(conv), arguments, count);
+		spec_conv(spec_check(conv), arguments);
 		conv++;
-		count++;
 	}
-	return (count);
 }

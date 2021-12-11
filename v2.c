@@ -6,38 +6,37 @@
 #include <string.h>
 
 // int	spec_check(char *input);
-int	conversion(char *conv, va_list arguments, int count);
-
-void	ft_putstr(char *s)
-{
-	if (!s)
-		return ;
-	write(0, s, ft_strlen(s));
-}
+int	conversion(char *conv, va_list arguments);
+int	ft_count(int plus);
 
 int	ft_printf(char *inputstrings, ...)
 {
 	char		*conv;
-	static int	count;
+	// int			count;
 	va_list		arguments;
 
-	count = 0;
+	// count = ft_count(0);
 	va_start (arguments, inputstrings);
 	conv = inputstrings;
-	count = conversion(conv, arguments, count);
+	conversion(conv, arguments);
 	va_end(arguments);
-	return (count);
+	return (ft_count(0));
 }
 
 int	main(void)
 {
-	char	c;
-	char	d;
-	int		i;
+	// char	c;
+	// char	d;
+	char	*e = "Pizza";
+	// int		i;
+	int		j;
 
-	c = 'c';
-	d = 'd';
-	i = ft_printf("More text %c %c", c, d);
+	// c = 'c';
+	// d = 'd';
+	// i = ft_printf("More text %c %c", c, d);
+	// printf("\n");
+	// printf("%i\n", i);
+	j = ft_printf("String..? : %s", e);
 	printf("\n");
-	printf("%i\n", i);
+	printf("%i\n", j);
 }
