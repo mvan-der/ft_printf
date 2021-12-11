@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/30 14:53:39 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/10 16:08:49 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/11 14:27:07 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
 #include "./libft/libft.h"
 #include <stdio.h>
 #include <string.h>
-
-#define UINT_MAX 4294967295
 
 void	ft_putchar(int c)
 {
