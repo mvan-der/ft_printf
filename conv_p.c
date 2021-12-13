@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putnbr.c                                        :+:    :+:            */
+/*   conv_p.c                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/13 17:17:11 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/13 17:17:11 by mvan-der      ########   odam.nl         */
+/*   Created: 2021/12/13 18:47:04 by mvan-der      #+#    #+#                 */
+/*   Updated: 2021/12/13 19:24:10 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include "./libft/libft.h"
+#include "ft_printf.h"
 
-void	ft_putnbr(long int n)
+void	conv_p(va_list arguments)
 {
-	if (n == -2147483648)
-	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
-	}
-	else if (n < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr((n * -1));
-	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-		ft_putchar(n % 10 + '0');
+	int	i;
+
+	i = va_arg(arguments, int);
+	ft_putstr("pointer");
 }

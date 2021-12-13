@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/06 15:22:10 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/11 20:50:30 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/13 19:00:25 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t			ft_strlen(const char *s);
 // int				ft_isalnum(int c);
 // int				ft_isascii(int c);
 // int				ft_isprint(int c);
-// int				ft_toupper(int c);
+int				ft_toupper(int c);
 // int				ft_tolower(int c);
 void			*ft_calloc(size_t nmemb, size_t size);
 // char			*ft_strdup(const char *s);
@@ -43,15 +43,13 @@ void			*ft_calloc(size_t nmemb, size_t size);
 // char			*ft_strjoin(char const *s1, char const *s2);
 // char			*ft_strtrim(char const *s1, char const *set);
 // char			**ft_split(char const *s, char c);
-char			*ft_itoa(long int n, int base);
+char			*ft_itoa(long int n, int base, char c);
 // char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // void			ft_putendl_fd(char *s, int fd);
 // void			ft_putchar_fd(char c, int fd);
 // void			ft_putnbr_fd(int n, int fd);
 // void			ft_putstr_fd(char *s, int fd);
 // void			ft_putendl_fd(char *s, int fd);
-void			ft_putchar(int c);
-void			ft_putstr(char *s);
 
 // typedef struct	s_list
 // {
