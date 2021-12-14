@@ -6,7 +6,7 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2021/12/14 14:36:38 by mvan-der      ########   odam.nl          #
+#    Updated: 2021/12/14 15:19:41 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIB = ./libft/libft.a
 
 SRCS = conv_cdi.c conv_p.c conv_uxX.c conversion.c ft_count.c ft_printf.c \
-ft_putchar.c ft_putstr.c
+ft_putchar.c ft_putstr.c spec_check.c
 
 SRCOBJ = $(SRCS:.c=.o)
 

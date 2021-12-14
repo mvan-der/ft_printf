@@ -6,13 +6,11 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 17:16:36 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/13 17:17:05 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 15:08:39 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_count(int plus);
+#include "ft_printf.h"
 
 void	ft_putchar(int c)
 {

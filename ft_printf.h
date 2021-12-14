@@ -6,14 +6,15 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 19:16:50 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/13 19:23:46 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 15:09:30 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
 # include <stdarg.h>
 
 int		ft_printf(char *inputstrings, ...);

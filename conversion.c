@@ -6,23 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 17:16:41 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 14:54:23 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 15:07:45 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdarg.h>
 #include "./libft/libft.h"
-
-int		spec_check(char *input);
-void	conv_c(va_list arguments);
-void	conv_s(va_list arguments);
-void	conv_p(va_list arguments);
-void	conv_di(va_list arguments);
-void	conv_u(va_list arguments);
-void	conv_x(va_list arguments);
-void	conv_x2(va_list arguments);
-void	ft_putchar(int c);
+#include "ft_printf.h"
 
 int	spec_conv(int a, va_list arguments)
 {

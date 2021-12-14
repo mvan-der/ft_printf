@@ -6,13 +6,10 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:18:31 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 13:45:52 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 15:07:33 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdarg.h>
 #include "./libft/libft.h"
 #include "ft_printf.h"
 

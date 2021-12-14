@@ -6,17 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 17:36:57 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 13:43:54 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 15:07:37 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdarg.h>
 #include "./libft/libft.h"
-
-void	ft_putchar(int c);
-void	ft_putstr(char *s);
+#include "ft_printf.h"
 
 void	conv_u(va_list arguments)
 {

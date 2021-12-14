@@ -6,15 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/11 20:49:01 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/13 19:19:55 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 15:08:48 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "./libft/libft.h"
 #include "ft_printf.h"
-
-int	ft_count(int plus);
 
 void	ft_putstr(char *s)
 {
