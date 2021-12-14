@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   conv_cdi.c                                         :+:    :+:            */
+/*   conv_csdi.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:18:31 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 15:07:33 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 16:18:27 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "ft_printf.h"
+#include <stdio.h>
 
 void	conv_c(va_list arguments)
 {
@@ -26,6 +27,8 @@ void	conv_s(va_list arguments)
 	char	*s;
 
 	s = va_arg(arguments, char *);
+	if (s == NULL)
+		ft_putstr("(null)");
 	ft_putstr(s);
 }
 

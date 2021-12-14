@@ -6,7 +6,7 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2021/12/14 15:19:41 by mvan-der      ########   odam.nl          #
+#    Updated: 2021/12/14 16:30:42 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ HEADERS = ft_printf.h
 CFLAGS = -Wall -Wextra -Werror
 LIB = ./libft/libft.a
 
-SRCS = conv_cdi.c conv_p.c conv_uxX.c conversion.c ft_count.c ft_printf.c \
-ft_putchar.c ft_putstr.c spec_check.c
+SRCS = conv_csdi.c conv_p.c conv_uxX.c conversion.c ft_count.c ft_printf.c \
+ft_putchar.c ft_putstr.c spec_check.c ft_itoa_printf.c
 
 SRCOBJ = $(SRCS:.c=.o)
 

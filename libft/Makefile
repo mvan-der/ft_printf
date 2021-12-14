@@ -6,14 +6,14 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2021/12/14 14:00:35 by mvan-der      ########   odam.nl          #
+#    Updated: 2021/12/14 16:30:29 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 HEADER = libft.h
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_calloc.c ft_itoa.c ft_strjoin.c ft_strlen.c
+SRCS = ft_calloc.c ft_strjoin.c ft_strlen.c
 
 SRCOBJ = $(SRCS:.c=.o)
 
