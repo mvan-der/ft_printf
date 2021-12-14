@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putnbr.c                                        :+:    :+:            */
+/*   ft_strjoin.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/13 17:17:11 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/13 17:17:11 by mvan-der      ########   odam.nl         */
+/*   Created: 2020/11/07 12:39:57 by mvan-der      #+#    #+#                 */
+/*   Updated: 2020/11/26 15:04:53 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
-#include "./libft/libft.h"
 
-void	ft_putnbr(long int n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (n == -2147483648)
+	char	*newstr;
+	size_t	i;
+	size_t	j;
+
+	if (!s1 || !s2)
+		return (0);
+	newstr = ft_calloc(sizeof(char), ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!newstr)
+		return (0);
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
+		newstr[j] = s1[i];
+		i++;
+		j++;
 	}
-	else if (n < 0)
+	i = 0;
+	while (s2[i] != '\0')
 	{
-		ft_putchar('-');
-		ft_putnbr((n * -1));
+		newstr[j] = s2[i];
+		i++;
+		j++;
 	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-		ft_putchar(n % 10 + '0');
+	return (newstr);
 }

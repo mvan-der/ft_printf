@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:47:04 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/13 19:24:10 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 14:54:08 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,16 @@
 
 void	conv_p(va_list arguments)
 {
-	int	i;
+	void				*p;
+	unsigned long int	i;
+	char			*str;
+	char			*res;
 
-	i = va_arg(arguments, int);
-	ft_putstr("pointer");
+	p = va_arg(arguments, void *);
+	i = (unsigned long int) p;
+	str = ft_itoa(i, 16, 'x');
+	res = ft_strjoin("0x", str);
+	ft_putstr(res);
+	free(str);
+	free(res);
 }
