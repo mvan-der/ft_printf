@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:16:40 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/13 18:16:49 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 18:10:05 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ int	spec_check(char *input)
 		return ('x');
 	if (*input == 'X')
 		return ('X');
+	if (*input == '%')
+		return ('%');
 	return (1);
 }
