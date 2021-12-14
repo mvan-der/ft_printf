@@ -6,7 +6,7 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2021/12/14 16:30:42 by mvan-der      ########   odam.nl          #
+#    Updated: 2021/12/14 17:40:54 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,19 +23,17 @@ SRCOBJ = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): libft
-	ar crs $(NAME) $(SRCOBJ) $(LIB)
+	ar crs $(NAME) $(SRCOBJ)
 
 %.o : %.c $(HEADER)
 	$(CC) -c $(FLAGS) -o $@ $<
 
 libft: $(SRCOBJ)
 	cd libft && make
+	cp $(LIB) ../ft_printf/$(NAME)
 
 clean:
 	rm -f $(SRCOBJ)
-
-#fclean: clean
-#	rm -f $(NAME)
 
 re: fclean all
 
