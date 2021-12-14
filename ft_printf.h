@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 19:16:50 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 16:31:29 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 19:06:37 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@
 
 int		ft_printf(char *inputstrings, ...);
 int		ft_count(int plus);
-int		spec_check(char *input);
-int		spec_conv(int a, va_list arguments);
-void	conversion(char *conv, va_list arguments);
+int		spec_conv(char *a, va_list arguments);
 void	conv_c(va_list arguments);
 void	conv_s(va_list arguments);
 void	conv_p(va_list arguments);

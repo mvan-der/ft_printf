@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:16:10 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 15:08:14 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 19:09:26 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,17 @@ int	ft_printf(char *inputstrings, ...)
 	ft_count(-1);
 	va_start (arguments, inputstrings);
 	conv = inputstrings;
-	conversion(conv, arguments);
+	while (*inputstrings)
+	{
+		if (*inputstrings == '%')
+		{
+			spec_conv(inputstrings, arguments);
+			inputstrings++;
+		}
+		else
+			ft_putchar(*inputstrings);
+		inputstrings++;
+	}
 	va_end(arguments);
 	return (ft_count(0));
 }

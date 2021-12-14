@@ -6,47 +6,33 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 17:16:41 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 18:48:16 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/14 19:06:02 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "ft_printf.h"
 
-int	spec_conv(int a, va_list arguments)
+int	spec_conv(char *a, va_list arguments)
 {
-	if (a == 'c')
+	a++;
+	if (*a == 'c')
 		conv_c(arguments);
-	if (a == 's')
+	else if (*a == 's')
 		conv_s(arguments);
-	if (a == 'p')
+	else if (*a == 'p')
 		conv_p(arguments);
-	if (a == 'd')
+	else if (*a == 'd')
 		conv_di(arguments);
-	if (a == 'i')
+	else if (*a == 'i')
 		conv_di(arguments);
-	if (a == 'u')
+	else if (*a == 'u')
 		conv_u(arguments);
-	if (a == 'x')
+	else if (*a == 'x')
 		conv_x(arguments);
-	if (a == 'X')
+	else if (*a == 'X')
 		conv_x2(arguments);
-	if (a == '%')
+	else if (*a == '%')
 		ft_putchar ('%');
 	return (1);
-}
-
-void	conversion(char *conv, va_list arguments)
-{
-	while (*conv)
-	{
-		while (*conv != '%')
-		{
-			ft_putchar(*conv);
-			conv++;
-		}
-		conv++;
-		spec_conv(spec_check(conv), arguments);
-		conv++;
-	}
 }
