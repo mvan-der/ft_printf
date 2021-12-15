@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   conversion.c                                       :+:    :+:            */
+/*   spec_conv.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 17:16:41 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 19:06:02 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/15 12:58:32 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "ft_printf.h"
 
-int	spec_conv(char *a, va_list arguments)
+void	spec_conv(char *a, va_list arguments)
 {
 	a++;
 	if (*a == 'c')
@@ -34,5 +34,4 @@ int	spec_conv(char *a, va_list arguments)
 		conv_x2(arguments);
 	else if (*a == '%')
 		ft_putchar ('%');
-	return (1);
 }

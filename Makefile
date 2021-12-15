@@ -6,7 +6,7 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2021/12/14 19:07:40 by mvan-der      ########   odam.nl          #
+#    Updated: 2021/12/15 13:15:03 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,4 +40,3 @@ fclean: clean
 	rm -f $(NAME)
 	cd libft && make $@
 re: fclean all
-	cd libft && make $@

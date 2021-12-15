@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:16:10 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 19:09:26 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/15 12:55:15 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 
 int	ft_printf(char *inputstrings, ...)
 {
-	char		*conv;
 	va_list		arguments;
 
 	ft_count(-1);
 	va_start (arguments, inputstrings);
-	conv = inputstrings;
 	while (*inputstrings)
 	{
 		if (*inputstrings == '%')

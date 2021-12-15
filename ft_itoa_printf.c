@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_itoa.c                                          :+:    :+:            */
+/*   ft_itoa_printf.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/10 13:08:15 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 13:46:46 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/15 13:10:37 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "./libft/libft.h"
+#include "ft_printf.h"
 
-void	*ft_calloc(size_t nmemb, size_t size);
-
-static int	ft_count_n(long int nb, int base)
+static int	ft_size_n(long int nb, int base)
 {
 	size_t	count;
 
@@ -41,8 +39,8 @@ static char	*ft_itoa_magic_lower(long int nb, int base)
 	size_t	i;
 	int		mod;
 
-	i = ft_count_n(nb, base) - 1;
-	result = ft_calloc(sizeof(char), ft_count_n(nb, base) + 1);
+	i = ft_size_n(nb, base) - 1;
+	result = ft_calloc(sizeof(char), ft_size_n(nb, base) + 1);
 	if (!result)
 		return (NULL);
 	if (nb < 0)
@@ -69,8 +67,8 @@ static char	*ft_itoa_magic_upper(long int nb, int base)
 	size_t	i;
 	int		mod;
 
-	i = ft_count_n(nb, base) - 1;
-	result = ft_calloc(sizeof(char), ft_count_n(nb, base) + 1);
+	i = ft_size_n(nb, base) - 1;
+	result = ft_calloc(sizeof(char), ft_size_n(nb, base) + 1);
 	if (!result)
 		return (NULL);
 	if (nb < 0)
