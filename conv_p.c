@@ -6,12 +6,13 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:47:04 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/14 16:33:26 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/15 19:08:05 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "ft_printf.h"
+#include <stdio.h>
 
 void	conv_p(va_list arguments)
 {
@@ -27,7 +28,7 @@ void	conv_p(va_list arguments)
 		return ;
 	}
 	i = (unsigned long int) p;
-	str = ft_itoa(i, 16, 'x');
+	str = ft_utoa(i, 16, 'x');
 	res = ft_strjoin("0x", str);
 	ft_putstr(res);
 	free(str);

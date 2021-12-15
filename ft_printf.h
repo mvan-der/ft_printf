@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 19:16:50 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/15 12:59:04 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/15 19:07:30 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	conv_u(va_list arguments);
 void	conv_x(va_list arguments);
 void	conv_x2(va_list arguments);
 char	*ft_itoa(long int n, int base, char c);
+char	*ft_utoa(unsigned long int n, int base, char c);
 void	ft_putchar(int c);
 void	ft_putstr(char *s);
 int		ft_count(int plus);
