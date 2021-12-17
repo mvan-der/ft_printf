@@ -6,13 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:47:04 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/15 19:08:05 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/17 12:09:37 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "ft_printf.h"
-#include <stdio.h>
 
 void	conv_p(va_list arguments)
 {
