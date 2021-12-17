@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/10 13:08:15 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/15 19:07:13 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/17 11:40:09 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ static int	ft_size_n(unsigned long int nb, int base)
 
 static char	*ft_utoa_magic_lower(unsigned long int nb, int base)
 {
-	char	*result;
+	char				*result;
 	unsigned long int	i;
-	int		mod;
+	int					mod;
 
 	i = ft_size_n(nb, base) - 1;
 	result = ft_calloc(sizeof(char), ft_size_n(nb, base) + 1);
@@ -63,9 +63,9 @@ static char	*ft_utoa_magic_lower(unsigned long int nb, int base)
 
 static char	*ft_utoa_magic_upper(unsigned long int nb, int base)
 {
-	char	*result;
+	char				*result;
 	unsigned long int	i;
-	int		mod;
+	int					mod;
 
 	i = ft_size_n(nb, base) - 1;
 	result = ft_calloc(sizeof(char), ft_size_n(nb, base) + 1);
@@ -91,7 +91,7 @@ static char	*ft_utoa_magic_upper(unsigned long int nb, int base)
 
 char	*ft_utoa(unsigned long int n, int base, char c)
 {
-	char		*str;
+	char				*str;
 	unsigned long int	nb;
 
 	nb = n;
