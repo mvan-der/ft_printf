@@ -6,7 +6,7 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2021/12/15 19:08:44 by mvan-der      ########   odam.nl          #
+#    Updated: 2021/12/18 12:57:38 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ ft_utoa_printf.c
 
 SRCOBJ = $(SRCS:.c=.o)
 
+.PHONY: all
 all: $(NAME)
 
 $(NAME): libft
@@ -33,11 +34,14 @@ $(NAME): libft
 libft: $(SRCOBJ)
 	$(MAKE) -C ./libft
 
+.PHONY: clean
 clean:
 	rm -f $(SRCOBJ)
 
-.PHONY: all clean fclean re
+.PHONY: fclean
 fclean: clean
 	rm -f $(NAME)
 	$(MAKE) -C ./libft $@
+
+.PHONY: re
 re: fclean all

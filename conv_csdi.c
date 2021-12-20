@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:18:31 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/17 12:17:15 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/20 11:01:09 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 
 void	conv_c(va_list arguments)
 {
-	int	i;
-
-	i = va_arg(arguments, int);
-	ft_putchar (i);
+	ft_putchar (va_arg(arguments, int));
 }
 
 void	conv_s(va_list arguments)

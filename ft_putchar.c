@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 17:16:36 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/15 18:22:07 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/20 09:41:32 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_putchar(int c)
 {
-	write(1, &c, 1);
-	ft_count(1);
+	ft_count(write(1, &c, 1));
 }
