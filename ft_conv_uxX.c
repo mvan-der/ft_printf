@@ -1,41 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   conv_csdi.c                                        :+:    :+:            */
+/*   ft_conv_uxX.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/13 18:18:31 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/20 13:37:48 by mvan-der      ########   odam.nl         */
+/*   Created: 2021/12/13 17:36:57 by mvan-der      #+#    #+#                 */
+/*   Updated: 2021/12/22 14:00:43 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
 #include "ft_printf.h"
 
-void	conv_c(va_list arguments)
+void	ft_conv_u(va_list arguments)
 {
-	ft_putchar (va_arg(arguments, int));
+	unsigned int	j;
+	char			*str;
+
+	j = va_arg(arguments, int);
+	str = ft_utoa_printf(j, 10, 'u');
+	ft_putstr(str);
+	free(str);
 }
 
-void	conv_s(va_list arguments)
+void	ft_conv_x(va_list arguments)
 {
-	char	*s;
+	unsigned int	j;
+	char			*str;
 
-	s = va_arg(arguments, char *);
-	if (s == NULL)
-		ft_putstr("(null)");
-	else
-		ft_putstr(s);
+	j = va_arg(arguments, int);
+	str = ft_utoa_printf(j, 16, 'x');
+	ft_putstr(str);
+	free(str);
 }
 
-void	conv_di(va_list arguments)
+void	ft_conv_x2(va_list arguments)
 {
-	int		i;
-	char	*str;
+	unsigned int	j;
+	char			*str;
 
-	i = va_arg(arguments, int);
-	str = ft_itoa(i, 10);
+	j = va_arg(arguments, int);
+	str = ft_utoa_printf(j, 16, 'X');
 	ft_putstr(str);
 	free(str);
 }

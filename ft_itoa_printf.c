@@ -6,11 +6,10 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/10 13:08:15 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/17 12:16:34 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/22 14:02:52 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
 #include "ft_printf.h"
 
 static int	ft_size_n(long int nb, int base)
@@ -33,7 +32,7 @@ static int	ft_size_n(long int nb, int base)
 	return (count);
 }
 
-static char	*ft_itoa_magic(long int nb, int base)
+static char	*ft_itoa_conv(long int nb, int base)
 {
 	char	*result;
 	size_t	i;
@@ -61,7 +60,7 @@ static char	*ft_itoa_magic(long int nb, int base)
 	return (result);
 }
 
-char	*ft_itoa(long int n, int base)
+char	*ft_itoa_printf(long int n, int base)
 {
 	char		*str;
 	long int	nb;
@@ -75,6 +74,6 @@ char	*ft_itoa(long int n, int base)
 		str[0] = '0';
 		return (str);
 	}
-	str = ft_itoa_magic(nb, base);
+	str = ft_itoa_conv(nb, base);
 	return (str);
 }

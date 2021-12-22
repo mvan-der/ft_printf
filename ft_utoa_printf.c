@@ -6,11 +6,10 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/10 13:08:15 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/20 11:06:11 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/22 14:03:53 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
 #include "ft_printf.h"
 
 static int	ft_size_n(unsigned long int nb, int base)
@@ -23,8 +22,6 @@ static int	ft_size_n(unsigned long int nb, int base)
 		count = 1;
 		return (count);
 	}
-	if (nb < 0)
-		count++;
 	while (nb != 0)
 	{
 		nb = nb / base;
@@ -33,7 +30,7 @@ static int	ft_size_n(unsigned long int nb, int base)
 	return (count);
 }
 
-static char	*ft_utoa_magic_lower(unsigned long int nb, int base)
+static char	*ft_utoa_conv_lower(unsigned long int nb, int base)
 {
 	char				*result;
 	unsigned long int	i;
@@ -56,7 +53,7 @@ static char	*ft_utoa_magic_lower(unsigned long int nb, int base)
 	return (result);
 }
 
-static char	*ft_utoa_magic_upper(unsigned long int nb, int base)
+static char	*ft_utoa_conv_upper(unsigned long int nb, int base)
 {
 	char				*result;
 	unsigned long int	i;
@@ -79,12 +76,10 @@ static char	*ft_utoa_magic_upper(unsigned long int nb, int base)
 	return (result);
 }
 
-char	*ft_utoa(unsigned long int n, int base, char c)
+char	*ft_utoa_printf(unsigned long int n, int base, char c)
 {
 	char				*str;
-	unsigned long int	nb;
 
-	nb = n;
 	if (n == 0)
 	{
 		str = (char *)ft_calloc(sizeof(char), 2);
@@ -94,8 +89,8 @@ char	*ft_utoa(unsigned long int n, int base, char c)
 		return (str);
 	}
 	if (c == 'x')
-		str = ft_utoa_magic_lower(nb, base);
+		str = ft_utoa_conv_lower(n, base);
 	else
-		str = ft_utoa_magic_upper(nb, base);
+		str = ft_utoa_conv_upper(n, base);
 	return (str);
 }

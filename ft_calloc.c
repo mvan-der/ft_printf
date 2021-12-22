@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   conv_p.c                                           :+:    :+:            */
+/*   ft_calloc.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/13 18:47:04 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/17 12:09:37 by mvan-der      ########   odam.nl         */
+/*   Created: 2020/11/04 11:30:59 by mvan-der      #+#    #+#                 */
+/*   Updated: 2021/12/22 14:02:42 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
 #include "ft_printf.h"
 
-void	conv_p(va_list arguments)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void				*p;
-	unsigned long int	i;
-	char				*str;
-	char				*res;
+	unsigned char	*ptr;
+	size_t			i;
 
-	p = va_arg(arguments, void *);
-	if (p == NULL)
+	if (nmemb == 0 || size == 0)
 	{
-		ft_putstr("0x0");
-		return ;
+		nmemb = 1;
+		size = 1;
 	}
-	i = (unsigned long int) p;
-	str = ft_utoa(i, 16, 'x');
-	res = ft_strjoin("0x", str);
-	ft_putstr(res);
-	free(str);
-	free(res);
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (i < (nmemb * size))
+	{
+		ptr[i] = 0;
+		i++;
+	}
+	return (ptr);
 }

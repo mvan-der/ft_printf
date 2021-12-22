@@ -6,11 +6,10 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/11 20:49:01 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/20 09:40:59 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/22 14:03:00 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
 #include "ft_printf.h"
 
 void	ft_putstr(char *s)

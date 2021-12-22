@@ -6,11 +6,10 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:16:10 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/15 12:55:15 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/12/22 14:02:12 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
 #include "ft_printf.h"
 
 int	ft_printf(char *inputstrings, ...)
@@ -23,7 +22,7 @@ int	ft_printf(char *inputstrings, ...)
 	{
 		if (*inputstrings == '%')
 		{
-			spec_conv(inputstrings, arguments);
+			ft_spec_conv(inputstrings, arguments);
 			inputstrings++;
 		}
 		else
