@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
+/*   ft_memmove.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/07 12:39:57 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/22 14:03:15 by mvan-der      ########   odam.nl         */
+/*   Created: 2020/11/03 15:01:27 by mvan-der      #+#    #+#                 */
+/*   Updated: 2020/11/14 15:02:22 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*newstr;
-	size_t	i;
-	size_t	j;
+	char		*dptr;
+	const char	*sptr;
+	char		*enddest;
+	const char	*endsrc;
 
-	if (!s1 || !s2)
+	dptr = dest;
+	sptr = src;
+	enddest = dptr + (n - 1);
+	endsrc = sptr + (n - 1);
+	if (dptr == NULL && sptr == NULL)
 		return (0);
-	newstr = ft_calloc(sizeof(char), ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!newstr)
-		return (0);
-	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
+	if (enddest < endsrc)
 	{
-		newstr[j] = s1[i];
-		i++;
-		j++;
+		ft_memcpy(dest, src, n);
+		return (dest);
 	}
-	i = 0;
-	while (s2[i] != '\0')
+	while (n)
 	{
-		newstr[j] = s2[i];
-		i++;
-		j++;
+		*enddest = *endsrc;
+		enddest--;
+		endsrc--;
+		n--;
 	}
-	return (newstr);
+	return (dest);
 }

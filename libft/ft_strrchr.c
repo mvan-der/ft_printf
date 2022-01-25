@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strlen.c                                        :+:    :+:            */
+/*   ft_strrchr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/03 18:21:21 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/22 14:03:39 by mvan-der      ########   odam.nl         */
+/*   Created: 2020/10/28 16:02:10 by mvan-der      #+#    #+#                 */
+/*   Updated: 2021/03/09 16:18:36 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	char	*a;
+	int		i;
 
+	a = (char *)s;
 	i = 0;
-	while (s[i] != '\0')
+	while (a[i] != '\0')
 		i++;
-	return (i);
+	if (c == '\0')
+		return (&a[i]);
+	while (i >= 0)
+	{
+		if (a[i] == c)
+			return (&a[i]);
+		i--;
+	}
+	return (0);
 }

@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_calloc.c                                        :+:    :+:            */
+/*   ft_strdup.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/04 11:30:59 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/22 14:02:42 by mvan-der      ########   odam.nl         */
+/*   Created: 2020/11/05 10:16:59 by mvan-der      #+#    #+#                 */
+/*   Updated: 2020/11/26 15:03:42 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strdup(const char *s)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	char	*dest;
+	size_t	i;
 
-	if (nmemb == 0 || size == 0)
-	{
-		nmemb = 1;
-		size = 1;
-	}
-	ptr = malloc(nmemb * size);
-	if (!ptr)
-		return (NULL);
+	dest = malloc(ft_strlen(s) + 1);
+	if (!dest)
+		return (0);
 	i = 0;
-	while (i < (nmemb * size))
+	while (s[i] != '\0')
 	{
-		ptr[i] = 0;
+		dest[i] = s[i];
 		i++;
 	}
-	return (ptr);
+	dest[i] = '\0';
+	return (dest);
 }
