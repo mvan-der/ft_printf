@@ -6,14 +6,14 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2022/01/25 11:24:59 by mvan-der      ########   odam.nl          #
+#    Updated: 2022/01/25 13:37:22 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 HEADERS = ft_printf.h
 CFLAGS = -Wall -Wextra -Werror
-LIB = ./libft/libft.a
+LIBFT = ./libft/libft.a
 
 SRCS = ft_conv_csdi.c ft_conv_p.c ft_conv_uxX.c ft_count.c \
 ft_printf.c ft_putchar_printf.c ft_putstr_printf.c \
@@ -21,16 +21,17 @@ ft_spec_conv.c ft_itoa_printf.c ft_utoa_printf.c
 
 SRCOBJ = $(SRCS:.c=.o)
 
-all: $(NAME)
+all: $(NAME) $(LIBFT)
 
-$(NAME): libft
-	cp $(LIB) $(NAME)
+$(NAME): $(SRCOBJ) $(LIBFT)
+	$(CC) -c $(SRCS) $(CFLAGS)
+	cp $(LIBFT) $(NAME)
 	ar crs $(NAME) $(SRCOBJ)
 
 %.o : %.c $(HEADER)
 	$(CC) -c $(FLAGS) -o $@ $<
 
-libft: $(SRCOBJ)
+$(LIBFT):
 	$(MAKE) -C ./libft
 
 clean:

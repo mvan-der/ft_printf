@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 19:16:50 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/22 13:55:38 by mvan-der      ########   odam.nl         */
+/*   Updated: 2022/01/25 13:38:14 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include "./libft/libft.h"
 
 int		ft_printf(char *inputstrings, ...);
 
@@ -32,11 +33,5 @@ char	*ft_utoa_printf(unsigned long int n, int base, char c);
 void	ft_putchar(int c);
 void	ft_putstr(char *s);
 int		ft_count(int plus);
-void	*ft_calloc(size_t nmemb, size_t size);
-char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlen(const char *s);
-void	*ft_calloc(size_t nmemb, size_t size);
-char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlen(const char *s);
 
 #endif
