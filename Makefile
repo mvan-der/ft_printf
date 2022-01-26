@@ -6,7 +6,7 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2022/01/26 14:02:32 by mvan-der      ########   odam.nl          #
+#    Updated: 2022/01/26 14:06:25 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ SRCOBJ = $(SRCS:.c=.o)
 all: $(NAME) $(LIBFT)
 
 $(NAME): $(SRCOBJ) $(LIBFT)
-	# $(CC) -c $(SRCS) $(CFLAGS)
 	cp $(LIBFT) $(NAME)
 	ar crs $(NAME) $(SRCOBJ)
 
