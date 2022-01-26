@@ -6,7 +6,7 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2022/01/25 11:17:56 by mvan-der      ########   odam.nl          #
+#    Updated: 2022/01/26 14:03:04 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ $(NAME): $(SRCOBJ)
 	ar crs $(NAME) $(SRCOBJ)
 
 %.o : %.c $(HEADER)
-	$(CC) -c $(FLAGS) -o $@ $<
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
 	rm -f $(SRCOBJ)
