@@ -6,13 +6,13 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 17:16:41 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/22 14:00:17 by mvan-der      ########   odam.nl         */
+/*   Updated: 2022/01/27 10:59:36 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_spec_conv(char *a, va_list arguments)
+void	ft_spec_conv(const char *a, va_list arguments)
 {
 	a++;
 	if (*a == 'c')

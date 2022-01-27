@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 19:16:50 by mvan-der      #+#    #+#                 */
-/*   Updated: 2022/01/25 13:38:14 by mvan-der      ########   odam.nl         */
+/*   Updated: 2022/01/27 10:59:46 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 # include <stdarg.h>
 # include "./libft/libft.h"
 
-int		ft_printf(char *inputstrings, ...);
+int		ft_printf(const char *inputstrings, ...);
 
-void	ft_spec_conv(char *a, va_list arguments);
+void	ft_spec_conv(const char *a, va_list arguments);
 void	ft_conv_c(va_list arguments);
 void	ft_conv_s(va_list arguments);
 void	ft_conv_p(va_list arguments);

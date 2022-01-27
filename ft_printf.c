@@ -6,13 +6,13 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/13 18:16:10 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/22 14:02:12 by mvan-der      ########   odam.nl         */
+/*   Updated: 2022/01/27 10:59:29 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(char *inputstrings, ...)
+int	ft_printf(const char *inputstrings, ...)
 {
 	va_list		arguments;
 
