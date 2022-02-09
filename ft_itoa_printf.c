@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/10 13:08:15 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/12/22 14:02:52 by mvan-der      ########   odam.nl         */
+/*   Updated: 2022/02/09 10:54:07 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@ static int	ft_size_n(long int nb, int base)
 	size_t	count;
 
 	count = 0;
-	if (nb == 0)
-	{
-		count = 1;
-		return (count);
-	}
 	if (nb < 0)
 		count++;
 	while (nb != 0)
